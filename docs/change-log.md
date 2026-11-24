@@ -20,3 +20,4 @@
 - Moved the old standalone HTML prototype under `legacy-html/` and updated README, Pages, and Netlify settings to use the Godot `web-export/` output.
 - Added a repeatable Godot Web export script and generated the static deployment bundle.
 - Verified headless project startup and Web export without script/resource errors. Interactive browser and pupil/teacher playtests remain outstanding.
+- Pushed commit `c0f1e15` to `main`; inspected GitHub Actions run #2 and confirmed Pages is not enabled for the repository. Documented the one-time repository setting needed before the published URL can come online.

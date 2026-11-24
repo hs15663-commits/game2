@@ -47,4 +47,5 @@ passed_tests:
   - "Godot 4.7.2 Web export generated index.html, index.js, index.wasm, and index.pck."
 known_limitations:
   - "Web build generated, but desktop/mobile browser flow has not been visually or interactively checked."
+  - "GitHub Pages is not enabled/configured on the repository; run #2 fails at configure-pages and the public Pages URL currently returns 404. Repository owner must select GitHub Actions under Settings → Pages → Build and deployment → Source, then rerun the workflow."
   - "尚未取得小學生或教師的實際玩家證據。"

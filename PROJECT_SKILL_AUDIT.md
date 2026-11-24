@@ -13,7 +13,8 @@
 - Godot 4.7.2 stable 位於 `C:\Godot\Godot_v4.7.2-stable_win64.exe`；Web export templates 同版本。
 - `scripts/export_web.ps1` 成功輸出 `web-export/` 所需 HTML、JS、WASM 與 PCK；Godot headless 專案啟動退出碼為 0，沒有 script/resource error。
 - GitHub Pages workflow 使用 `web-export/`；Netlify publish directory 設為 `web-export`。
-- 尚未檢查 GitHub Actions 實際發佈、遠端線上頁面、桌機/手機互動及遊戲完整流程。
+- 已檢查 GitHub Actions：run #2 於 `configure-pages` 失敗，GitHub 回覆此 repository 尚未啟用/設定 Pages。預期 Pages URL 回傳 GitHub Pages 404；需要 repo 管理者在 **Settings → Pages → Build and deployment → Source** 選擇 **GitHub Actions**，然後重新執行 workflow。
+- 尚未檢查部署後的桌機/手機互動及完整遊戲流程。
 - 目前遊戲總包約 45.5 MB（WASM 約 39.5 MB）；需在真實瀏覽器觀察載入時間。
 - 沒有學生/老師試玩證據，不宣稱已證實學習成效。
 
@@ -21,4 +22,4 @@
 
 - 學習者年齡暫按 8–12 歲；尚未取得年級與閱讀程度確認。
 - 未收到教育獎勵權重，先採 `game-design` skill 的 Balanced baseline：L/E/M/A = 0.40/0.20/0.15/0.25，pG = 0.15、pC = 0.10。
-- 本機 HTTP/browser 驗證受執行環境限制：loopback socket 被拒；Computer Use browser snapshot 呼叫逾時。這兩項仍標記待驗，不以匯出成功替代。
+- 本機 HTTP/browser 驗證受執行環境限制：loopback socket 被拒。線上頁面目前無法載入，原因是 GitHub Pages 未啟用，不是遊戲匯出錯誤。

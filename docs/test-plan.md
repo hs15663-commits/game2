@@ -6,7 +6,7 @@
 2. Deterministic state flow: start → Level 1 wrong answer/retry → Level 1 correct/50 pts/KEY → Level 2 unlocked → Level 2 wrong/retry → Level 2 correct/50 pts/KEY → results (100 total) → restart (0 total).
 3. Confirm no answer can earn more than 50 points per level; duplicate clicks do not duplicate score or keys.
 4. Export single-thread Web and verify HTML/JS/WASM/PCK files in `web-export/`. **Passed locally; output generated.**
-   Local HTTP/browser verification remains pending: this environment denied loopback socket access and the computer-use browser inspection timed out.
+   Local HTTP verification was denied by loopback socket restrictions. The published URL currently returns GitHub Pages 404 because the repository has no Pages site enabled; workflow run #2 fails at `configure-pages` with `Get Pages site failed`.
 5. Inspect responsive text, contrast, focus visibility, keyboard operation, touch target size, reduced-motion setting and console/network errors.
 6. Review downloaded bundle size and confirm no learner data or third-party runtime request is sent.
 
