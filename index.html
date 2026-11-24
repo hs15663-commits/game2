@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#10151a" />
+  <meta name="description" content="跟著小小夢魔穿越兩座夢境關卡，學會生活理財與投資的基本觀念。" />
+  <title>小小夢魔：夢境理財所</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="小小夢魔首頁"><span class="brand-mark">✦</span><span>夢境理財所<small>THE DREAMING LEDGER</small></span></a>
+      <div class="chapter"><span class="live-dot"></span> 第一夜・夢境正在甦醒</div>
+      <button class="sound-toggle" id="soundToggle" aria-label="切換音效" title="切換音效">♫ <span>音效</span></button>
+    </header>
+
+    <section class="game-layout">
+      <div class="scene-column">
+        <div class="scene-topline"><span id="levelEyebrow">夢境 01 / 02</span><span>探索中 <i class="pulse"></i></span></div>
+        <div class="scene" id="scene" aria-label="夢境場景">
+          <div class="scene-sky"></div><div class="moon"></div><div class="window-frame"><div class="window-cross"></div></div>
+          <div class="distant-roof roof-a"></div><div class="distant-roof roof-b"></div>
+          <div class="haze haze-a"></div><div class="haze haze-b"></div>
+          <div class="lamp"><span></span></div>
+          <div class="shelf shelf-one"><b></b><b></b><b></b></div><div class="shelf shelf-two"><b></b><b></b></div>
+          <div class="door"><div class="keyhole">✦</div></div>
+          <div class="floor"></div><div class="floor-line"></div>
+          <div class="hero"><div class="hood"></div><div class="face"></div><div class="coat"></div><div class="feet"></div></div>
+          <div class="scene-caption"><span class="caption-kicker">THE QUIET CORRIDOR</span><h1 id="sceneTitle">沉睡的<br>零用錢走廊</h1><p id="sceneDescription">門後藏著你今晚的第一把鑰匙。</p></div>
+          <div class="key-indicator" id="keyIndicator"><span>✦</span><small>夢境鑰匙</small></div>
+          <div class="scene-bottom"><span>移動 <kbd>←</kbd><kbd>→</kbd> 或 <kbd>A</kbd><kbd>D</kbd></span><span>沿著光，找到出口</span></div>
+        </div>
+        <div class="level-rail"><div class="rail-label">今夜旅程</div><div class="rail-track"><div class="rail-fill" id="railFill"></div></div><div class="rail-step active" id="step1"><span>01</span><b>零用錢走廊</b></div><div class="rail-step" id="step2"><span>02</span><b>投資星海</b></div><div class="rail-end">終章</div></div>
+      </div>
+
+      <aside class="side-panel">
+        <div class="panel-heading"><div><div class="eyebrow">小小探險家</div><h2>晚安，旅人</h2></div><div class="avatar">☾</div></div>
+        <div class="score-card"><div><span class="eyebrow">本夜得分</span><div class="score-line"><strong id="score">0</strong><span>分</span></div></div><div class="score-glyph">✧</div><div class="score-progress"><span id="scoreProgress"></span></div><small id="scoreHint">答對問題，收集夢境星光</small></div>
+        <div class="lesson-card"><div class="lesson-title"><span class="lesson-icon">⌂</span><div><div class="eyebrow">理財小學堂</div><h3 id="lessonTitle">先存下，再慢慢花</h3></div></div><p id="lessonText">收到零用錢時，先留一部分給未來的自己。剩下的再安排想要和需要。</p><div class="tags"><span>生活理財</span><span id="lessonTag">儲蓄習慣</span></div></div>
+        <div class="mission"><div class="mission-head"><span class="mission-dot"></span><span>今晚任務</span><span class="mission-count" id="missionCount">0 / 2</span></div><p id="missionText">完成互動挑戰，取得走廊鑰匙。</p></div>
+        <button class="primary-button" id="challengeButton">開始互動挑戰 <span>↗</span></button>
+        <div class="panel-foot"><span>✦</span> 每個選擇，都讓未來多一點光。</div>
+      </aside>
+    </section>
+
+    <footer class="footer"><span>小小夢魔 <b>·</b> 夢境理財所</span><span>給每一位小小理財家的冒險</span><span>01 — 02</span></footer>
+  </main>
+
+  <div class="modal-backdrop" id="modal" aria-hidden="true">
+    <section class="challenge-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModal" aria-label="關閉">×</button><div class="modal-kicker" id="modalKicker">互動挑戰 · 01</div><h2 id="modalTitle">今晚收到 100 元零用錢，<br>你會怎麼安排？</h2><p class="modal-intro" id="modalIntro">把一點點留給未來，讓願望慢慢長大。</p>
+      <div class="choices" id="choices"></div><div class="feedback" id="feedback" aria-live="polite"></div><button class="primary-button modal-next" id="modalNext" disabled>確認選擇 <span>↗</span></button>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="game.js"></script>
+</body>
+</html>
