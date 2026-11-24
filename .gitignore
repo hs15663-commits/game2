@@ -1,0 +1,12 @@
+# Godot generated editor/cache files
+.godot/
+.godot-user-profile/
+builds/
+export.cfg
+*.translation
+
+# Local Blender preferences and temporary downloads
+.blender-user-config/
+.blender-user-scripts/
+*.tmp
+

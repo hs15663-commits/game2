@@ -1,0 +1,50 @@
+project_id: dream-ledger
+mode: teaching
+current_phase: sdlc-verification-release
+requirements_version: 0.1
+gate_status: approved
+dt_handoff: approved
+sdlc_release: candidate
+final_acceptance: pending
+confirmed:
+  - "目標學習者為小學生。"
+  - "遊戲主題為生活理財與投資入門。"
+  - "遊戲需要兩個關卡，每關有一個互動單元；解題通過才能取得該關 KEY。"
+  - "每關顯示得分，結尾顯示兩關的進步成果。"
+  - "要以 Godot 製作並輸出可部署在 GitHub Pages 或 Netlify 的網頁版。"
+  - "視覺參考《Little Nightmares》的暗色、巨物比例與探索氛圍；內容與資產需原創。"
+  - "Godot 4.7.2 stable 已安裝於 C:\\Godot。"
+  - "Godot 4.7.2 Web export templates 已安裝於使用者 Godot export_templates 目錄。"
+  - "Blender 5.3.0 已安裝於 C:\\Program Files\\Blender Foundation\\Blender 5.3。"
+  - "使用者於 2026-11-24 選擇玩法候選 B：夜市分岔故事。"
+  - "使用者於 2026-11-24 選擇視覺方向 02：紙片夜市。"
+  - "使用者於 2026-11-24 核准 project brief 與 MVP 範圍。"
+assumptions:
+  - "未收到 L/E/M/A 權重與 G/C 懲罰設定；依 game-design skill 暫採 Balanced baseline：L/E/M/A = 0.40/0.20/0.15/0.25，pG = 0.15，pC = 0.10。"
+  - "暫按小學中高年級 8–12 歲設計；尚待確認年級與閱讀能力。"
+  - "先做單人、離線、繁體中文靜態網頁，不收集個人資料、不連外服務。"
+  - "AI pre-score 僅供方案比較，並非玩家或專家證據。"
+open_questions:
+  - "Blender Toolkit addon/server 尚未檢出；是否採用即時控制工具或以 Blender 背景腳本產製模型？"
+  - "完成實作後尚未取得小學生或教師的實際測試資料。"
+artifacts:
+  audit: PROJECT_SKILL_AUDIT.md
+  brief: docs/project-brief.md
+  research: docs/research-notes.md
+  design_tournament: docs/game-design-tournament.md
+  visual_directions: docs/visual-directions.html
+  project_brief: docs/project-brief.md
+  system_spec: docs/system-spec.md
+  traceability: docs/traceability.md
+  test_plan: docs/test-plan.md
+  decision_log: docs/decision-log.md
+  change_log: docs/change-log.md
+required_tests:
+  - "Interactive desktop/mobile browser flow and responsive layout review."
+  - "Pupil/teacher playtest before learning-effect claims."
+passed_tests:
+  - "Godot 4.7.2 headless startup exited 0 without script/resource errors."
+  - "Godot 4.7.2 Web export generated index.html, index.js, index.wasm, and index.pck."
+known_limitations:
+  - "Web build generated, but desktop/mobile browser flow has not been visually or interactively checked."
+  - "尚未取得小學生或教師的實際玩家證據。"

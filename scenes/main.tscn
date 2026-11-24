@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="PackedScene" path="res://assets/models/night_market_diorama.glb" id="2_market"]
+
+[sub_resource type="Environment" id="Environment_market"]
+background_mode = 1
+background_color = Color(0.145098, 0.219608, 0.262745, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.95, 0.88, 0.72, 1)
+ambient_light_energy = 0.7
+tonemap_mode = 2
+
+[node name="DreamMarket" type="Node3D"]
+script = ExtResource("1_main")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+projection = 1
+size = 9.0
+position = Vector3(0, 0, 18)
+current = true
+
+[node name="KeyLight" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-25, -22, 0)
+light_color = Color(1, 0.88, 0.7, 1)
+light_energy = 1.1
+shadow_enabled = false
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_market")
+
+[node name="NightMarketDiorama" parent="." instance=ExtResource("2_market")]
+
